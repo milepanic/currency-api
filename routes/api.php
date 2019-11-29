@@ -13,8 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('jwt.auth')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('rates', 'CurrencyValuesController');
+Route::post('register', 'AuthController@register');
+Route::post('login', 'AuthController@login');
+Route::post('logout', 'AuthController@logout')->middleware('jwt.auth');
+
+Route::get('rates', 'CurrencyValuesController')->middleware('jwt.auth');
