@@ -17,7 +17,7 @@ class CurrencyService
                 'date' => $date,
             ],
             [
-                'excange_rates' => $result,
+                'exchange_rates' => $result,
                 'date' => $date,
             ]
         );

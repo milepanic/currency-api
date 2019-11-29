@@ -15,7 +15,7 @@ class CreateCurrencyValuesTable extends Migration
     {
         Schema::create('currency_values', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('excange_rates');
+            $table->text('exchange_rates');
             $table->date('date');
             $table->timestamps();
         });

@@ -9,7 +9,7 @@ class CurrencyValue extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'excange_rates' => 'array',
+        'exchange_rates' => 'array',
     ];
 
     protected $dates = [
